@@ -8,8 +8,12 @@ require('dotenv').config();
 
 //bring routes
 
-const appRoutes =  require('./routes/utilitiesApp')
-const authRoutes =  require('./routes/auth')
+const appRoutes =  require('./routes/utilitiesApp');
+const authRoutes =  require('./routes/auth');
+const userRoutes =  require('./routes/user');
+const categoryRoutes =  require('./routes/category');
+const tagRoutes =  require('./routes/tag');
+
 
 
 //app
@@ -37,6 +41,10 @@ if(process.env.NODE_ENV = 'development'){
 
 app.use('/api', appRoutes);
 app.use('/api', authRoutes);
+app.use('/api', userRoutes);
+app.use('/api', categoryRoutes);
+app.use('/api', tagRoutes);
+
 
 
 //routes
